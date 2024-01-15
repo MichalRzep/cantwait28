@@ -1,3 +1,5 @@
+import 'package:intl/intl.dart';
+
 class ItemModel {
   ItemModel({
     required this.tittle,
@@ -13,5 +15,9 @@ class ItemModel {
 
   String daysLeft() {
     return relaseDate.difference(DateTime.now()).inDays.toString();
+  }
+
+  String formatedDateTime() {
+    return DateFormat.MMMEd().format(relaseDate).toString();
   }
 }
